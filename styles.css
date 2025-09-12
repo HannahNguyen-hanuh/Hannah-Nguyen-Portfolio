@@ -1,0 +1,19 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Geneva, 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+    color: oklch(50.156% 0.19084 349.252);
+    margin-bottom: 0.5em;
+}
+
+.education {}
