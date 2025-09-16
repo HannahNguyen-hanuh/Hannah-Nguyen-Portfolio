@@ -582,7 +582,7 @@ span {
 @media (max-width: 600px) {
     html {
         font-size: 40%;
-        /* make text easier to read */
+        width: 100%;
     }
 
     .header {
