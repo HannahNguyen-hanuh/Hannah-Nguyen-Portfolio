@@ -56,11 +56,46 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const menuIcon = document.querySelector('#menu-icon');
-const navbar = document.querySelector('navbar');
+const menuIcon = document.querySelector("#menu-icon");
+const navbar = document.querySelector(".navbar");
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+menuIcon.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+  menuIcon.classList.toggle("bx-x");
+
+  const expanded = menuIcon.getAttribute("aria-expanded") === "true";
+  menuIcon.setAttribute("aria-expanded", !expanded);
+});
+
+document.querySelectorAll(".navbar a").forEach(link => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    menuIcon.classList.remove("bx-x");
+    menuIcon.setAttribute("aria-expanded", "false");
+  });
+});
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !message) {
+    alert("Please fill in at least your name, email, and message!");
+    return;
+  }
+
+
+
+  console.log({ name, email, phone, subject, message });
+    form.reset();
+
+  alert("Thank you! Your message has been submitted.");
+});
 
