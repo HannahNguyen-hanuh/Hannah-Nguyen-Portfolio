@@ -17,6 +17,7 @@
     <nav>
         <header class="header">
             <a href="#" class="logo">Hannah <span>Nguyen</span></a>
+            <div id="menu-icon" class="bx bx-menu" aria-label="Menu" aria-expanded="false"></div>
 
             <nav class="navbar" aria-label="Main navigation">
                 <a href="#home">Home</a>
@@ -28,19 +29,20 @@
 
     </nav>
 
-    <!-- body information-->
+    <!-- body information -->
     <main>
         <section class="home" id="home">
             <!-- LEFT: text, buttons, socials -->
             <div class="home-content">
                 <h1>Hi, I am <span class="hightlight">Hannah</span></h1>
                 <h3>
-                    I like
-                    <span class="typing-wrapper" aria-hidden="false">
+                    I like <span class="typing-text" aria-live="polite"></span>
+                    <!-- <span class="typing-wrapper" aria-hidden="false">
                         <span class="typing-text" aria-live="polite"></span>
-                    </span>
+                    </span> -->
                 </h3>
-                <p>Hi, I'm Hannah — a first-year Computer Science student passionate about exploring new
+                <p style="white-space: wrap;">Hi, I'm Hannah — a first-year Computer Science student passionate about
+                    exploring new
                     technologies, solving problems, and learning through every challenge. </p>
 
                 <div class="social-icons">
@@ -56,7 +58,7 @@
                 </div>
 
                 <div class="btn-group">
-                    <a href="resume.pdf" download>
+                    <a href="resume final.pdf" download>
                         <button class="btn">Download Resume</button>
                     </a>
 
@@ -78,9 +80,9 @@
             <p> Hi, I'm Hannah! I'm a first-year Computer Science student at Arizona State University who loves
                 learning how technology can bring ideas to life. I taught myself HTML and CSS to build my own
                 responsive portfolio website, and I'm continuing to grow my skills in Python and Java. Beyond
-                coding, I've had the chance to take on leadership roles — from running a Photography Club, being a part
-                of Women in Computer Science to serving as secretary for my Vietnamese Union — where I learned the
-                importance of teamwork,
+                coding, I've had the chance to take on leadership roles — from running a Photorgaphy Club, being a part
+                of Women in Computer Science to
+                serving as secretary for my Vietnamese Union — where I learned the importance of teamwork,
                 communication, and creativity. Outside of school, you can usually find me connecting with
                 others, or chasing down calculus 2 homework.</p>
 
@@ -129,23 +131,22 @@
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
 
-            <form action="">
+            <form id="contact-form">
                 <div class="input-group">
                     <div class="input-box">
-                        <input type="text" placeholder="Full Name">
-                        <input type="email" placeholder="Email">
+                        <input type="text" id="name" name="name" placeholder="Full Name">
+                        <input type="email" id="email" name="email" placeholder="Email">
                     </div>
 
                     <div class="input-box">
-                        <input type="number" placeholder="Phone Number">
-                        <input type="text" placeholder="Subject">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
                     </div>
                 </div>
 
                 <div class="input-group-2">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                    <input type="submit" value="Send Message" class="btn">
-
+                    <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn" id="submit-btn">Send Message</button>
                 </div>
             </form>
 
@@ -169,7 +170,7 @@
         </a>
     </div>
 
-    <ul class="list">
+    <ul class="footer-list">
         <li>
             <a href="#">FAQ</a>
         </li>
@@ -188,7 +189,7 @@
     </ul>
 
     <div class="copyright">
-        <p>© 2025 Hannah's Portfolio. All rights reserved.</p>
+        <div>© 2025 Hannah's Portfolio. All rights reserved.</div>
     </div>
 </footer>
 
